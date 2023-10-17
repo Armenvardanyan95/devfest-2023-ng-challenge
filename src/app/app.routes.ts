@@ -1,5 +1,5 @@
 import { Component, inject, Input } from "@angular/core";
-import { CommonModule, NgFor } from "@angular/common";
+import { NgFor } from "@angular/common";
 import {
   RouterLink,
   Routes,
@@ -39,7 +39,7 @@ export abstract class BasePage {
 
 @Component({
   selector: "app-first",
-  template: `First Menu: <app-menu [menuItems]="menuItems" />`,
+  template: `<h1>First Menu:</h1> <app-menu [menuItems]="menuItems" />`,
   standalone: true,
   imports: [MenuComponent],
 })
@@ -49,7 +49,7 @@ export class FirstComponent extends BasePage {
 
 @Component({
   selector: "app-second",
-  template: `Second Menu: <app-menu [menuItems]="menuItems" />`,
+  template: `<h1>Second Menu:</h1> <app-menu [menuItems]="menuItems" />`,
   standalone: true,
   imports: [MenuComponent],
 })
@@ -59,7 +59,7 @@ export class SecondComponent extends BasePage {
 
 @Component({
   selector: "app-third",
-  template: `Third Menu: <app-menu [menuItems]="menuItems" />`,
+  template: `<h1>Third Menu:</h1> <app-menu [menuItems]="menuItems" />`,
   standalone: true,
   imports: [MenuComponent],
 })

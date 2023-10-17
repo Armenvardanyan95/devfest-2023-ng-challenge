@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: "app-root",
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   template: `
-    <a [routerLink]="['first']">First page</a>
-    <a [routerLink]="['second']">Second page</a>
-    <a [routerLink]="['third']">Third page</a>
+    <div class="header">
+      <a [routerLink]="['first']" routerLinkActive="active">First page</a>
+      <a [routerLink]="['second']" routerLinkActive="active">Second page</a>
+      <a [routerLink]="['third']" routerLinkActive="active">Third page</a>
+    </div>
     <router-outlet />
   `,
 })
